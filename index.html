@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>院校通知监控</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">School Notice Crawler</p>
+        <h1>院校通知监控</h1>
+        <p id="summary" class="summary">正在加载通知数据...</p>
+      </div>
+      <a class="button" href="https://github.com/zhangrenzhen188-sketch/cdut-notice-crawler/actions/workflows/schedule.yml" target="_blank" rel="noreferrer">手动运行爬虫</a>
+    </header>
+
+    <section class="toolbar">
+      <input id="search" type="search" placeholder="搜索标题、学校或栏目">
+      <select id="sourceFilter">
+        <option value="">全部学校</option>
+      </select>
+    </section>
+
+    <section id="status" class="status"></section>
+    <section id="noticeList" class="notice-list"></section>
+  </main>
+
+  <template id="noticeTemplate">
+    <article class="notice-card">
+      <div class="notice-meta"></div>
+      <a class="notice-title" target="_blank" rel="noreferrer"></a>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
